@@ -1,0 +1,19 @@
+.bottom-tab-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff; /* Adjust to your desired background color */
+  border-top: 1px solid #e0e0e0; /* Optional: Add a top border for separation */
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0; /* Adjust padding as needed */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for elevation */
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+@media (min-width: 768px) {
+  .display-bottom {
+    display: none;
+  }
+}

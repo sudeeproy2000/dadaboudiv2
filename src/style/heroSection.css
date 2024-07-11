@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1023px) {
+  .cropped {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .full {
+    display: none;
+  }
+}

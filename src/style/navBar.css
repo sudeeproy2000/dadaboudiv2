@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Titillium Web", sans-serif;
+}
+
+:root {
+  --mainColor: #ffffff;
+  --mainColorLight: #5767aa;
+  --secondaryColor: #db2b39;
+  --textColor: #000000;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 2rem;
+  background-color: var(--mainColor);
+  color: var(--textColor);
+}
+
+nav .nav-item {
+  margin: 0 1rem;
+  color: var(--textColor);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav .nav-item::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: var(--textColor);
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+nav .nav-item:hover::after {
+  width: 100%;
+  left: 0;
+  background: var(--secondaryColor); /* Change to your desired hover color */
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+/* Media Query Start*/
+@media only screen and (max-width: 1024px) {
+  header nav {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: var(--mainColor);
+    transition: 1s;
+  }
+}
+/* Media Query End*/
+
+header img {
+  height: 100px;
+  width: 100px;
+}
+
+/* Media Query Start*/
+@media screen and (min-width: 600px) {
+  header img {
+    height: 140px;
+    width: 140px;
+  }
+
+  header .btn {
+    padding-inline: 70px;
+  }
+}
+/* Media Query End*/
+
+/* Button Pulse Animation */
+.btn {
+  background-color: #8a0221;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn:hover {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

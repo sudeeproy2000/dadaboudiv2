@@ -1,0 +1,17 @@
+.best {
+  height: 251px;
+  width: 251px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-inline: 10px;
+}
+
+@media (max-width: 768px) {
+  .best {
+    height: 160.64px;
+    width: 160.64px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-inline: 10px;
+  }
+}
